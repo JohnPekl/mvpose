@@ -1,0 +1,6 @@
+actorsGT.mat  Camera1                  ReadMe.txt
+Calibration   Camera2                  visualize2DGT.m
+Camera0       camera_parameter.pickle  visualize3DGT.m
+
+
+http://campar.cs.tum.edu/files/belagian/multihuman/CampusSeq1.tar.bz2

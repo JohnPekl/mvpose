@@ -1,6 +1,7 @@
 
 import os.path as osp
 import sys
+import numpy as np
 
 # Config project if not exist
 project_path = osp.abspath ( osp.join ( osp.dirname ( __file__ ), '..', '..' ) )
@@ -90,7 +91,7 @@ def matchSVT(S, dimGroup, **kwargs):
     X_bin = X > 0.5
     if verbose:
         print ( f"Alg terminated. Time = {info['time']}, #Iter = {info['iter']}, Res = ({pRes}, {dRes}), mu = {mu} \n" )
-    match_mat = transform_closure ( X_bin.numpy() )
+    match_mat = transform_closure(X_bin.numpy().astype(np.uint8))
     return torch.tensor(match_mat)
 
 
